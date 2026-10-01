@@ -1,7 +1,4 @@
-## Pasha Pashazade
-
-**Senior Software Engineer · Dynamics 365 Finance & Operations · C#/.NET · Azure**
-Baku, Azerbaijan
+<img src="./assets/header.svg" width="100%" alt="Pasha Pashazade — Senior Software Engineer · Dynamics 365 F&amp;O · C#/.NET · Azure">
 
 I build enterprise solutions on Microsoft Dynamics 365 Finance and Operations (X++) and the Microsoft stack: ERP extensions, integrations with banks and external systems (REST, OData, XML, OAuth 2.0), SSRS reporting and Azure DevOps CI/CD.
 
