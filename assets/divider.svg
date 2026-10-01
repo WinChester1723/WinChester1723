@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="24" viewBox="0 0 1200 24" role="presentation">
+  <defs><linearGradient id="l" x1="0" x2="1">
+    <stop offset="0" stop-color="#94a3b8" stop-opacity="0"/><stop offset=".5" stop-color="#3b82f6" stop-opacity=".7"/><stop offset="1" stop-color="#94a3b8" stop-opacity="0"/>
+  </linearGradient></defs>
+  <style>
+    .sans { font-family: 'Segoe UI', 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'JetBrains Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .rise { opacity: 0; animation: rise .8s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    .draw { transform: scaleX(0); animation: draw 1.1s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes draw { to { transform: scaleX(1); } }
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .draw { animation: none; opacity: 1; transform: none; }
+    }
+
+    .draw { transform-origin: 600px 12px; }
+  </style>
+  <rect x="0" y="11.5" width="1200" height="1" fill="url(#l)" class="draw"/>
+  <circle cx="600" cy="12" r="3" fill="#3b82f6" class="rise" style="animation-delay:.6s"/>
+</svg>

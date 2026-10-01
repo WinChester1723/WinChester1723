@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="64" viewBox="0 0 1200 64" role="img" aria-labelledby="t">
+  <title id="t">Stack: X++, C#, .NET, ASP.NET Core, SQL Server, OData, SOAP, SSRS, Azure DevOps, Docker, AKS, Python</title>
+  <style>
+    .sans { font-family: 'Segoe UI', 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'JetBrains Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .rise { opacity: 0; animation: rise .8s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    .draw { transform: scaleX(0); animation: draw 1.1s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes draw { to { transform: scaleX(1); } }
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .draw { animation: none; opacity: 1; transform: none; }
+    }
+
+    .chip { fill: #0f1627; stroke: #94a3b8; stroke-opacity: .24; }
+    .t { font-size: 15px; fill: #e6eaf2; }
+  </style>
+  <g transform="translate(26 0)"><g transform="translate(0 12)"><g class="rise" style="animation-delay:0.05s"><rect width="60" height="38" rx="8" class="chip"/><text x="30" y="24.5" text-anchor="middle" class="mono t">X++</text></g></g><g transform="translate(70 12)"><g class="rise" style="animation-delay:0.12s"><rect width="50" height="38" rx="8" class="chip"/><text x="25" y="24.5" text-anchor="middle" class="mono t">C#</text></g></g><g transform="translate(130 12)"><g class="rise" style="animation-delay:0.19s"><rect width="69" height="38" rx="8" class="chip"/><text x="34" y="24.5" text-anchor="middle" class="mono t">.NET</text></g></g><g transform="translate(209 12)"><g class="rise" style="animation-delay:0.26s"><rect width="142" height="38" rx="8" class="chip"/><text x="71" y="24.5" text-anchor="middle" class="mono t">ASP.NET Core</text></g></g><g transform="translate(361 12)"><g class="rise" style="animation-delay:0.33s"><rect width="124" height="38" rx="8" class="chip"/><text x="62" y="24.5" text-anchor="middle" class="mono t">SQL Server</text></g></g><g transform="translate(495 12)"><g class="rise" style="animation-delay:0.40s"><rect width="78" height="38" rx="8" class="chip"/><text x="39" y="24.5" text-anchor="middle" class="mono t">OData</text></g></g><g transform="translate(583 12)"><g class="rise" style="animation-delay:0.47s"><rect width="69" height="38" rx="8" class="chip"/><text x="34" y="24.5" text-anchor="middle" class="mono t">SOAP</text></g></g><g transform="translate(662 12)"><g class="rise" style="animation-delay:0.54s"><rect width="69" height="38" rx="8" class="chip"/><text x="34" y="24.5" text-anchor="middle" class="mono t">SSRS</text></g></g><g transform="translate(741 12)"><g class="rise" style="animation-delay:0.61s"><rect width="142" height="38" rx="8" class="chip"/><text x="71" y="24.5" text-anchor="middle" class="mono t">Azure DevOps</text></g></g><g transform="translate(893 12)"><g class="rise" style="animation-delay:0.68s"><rect width="87" height="38" rx="8" class="chip"/><text x="44" y="24.5" text-anchor="middle" class="mono t">Docker</text></g></g><g transform="translate(990 12)"><g class="rise" style="animation-delay:0.75s"><rect width="60" height="38" rx="8" class="chip"/><text x="30" y="24.5" text-anchor="middle" class="mono t">AKS</text></g></g><g transform="translate(1060 12)"><g class="rise" style="animation-delay:0.82s"><rect width="87" height="38" rx="8" class="chip"/><text x="44" y="24.5" text-anchor="middle" class="mono t">Python</text></g></g></g>
+</svg>
