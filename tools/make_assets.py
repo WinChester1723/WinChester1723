@@ -167,8 +167,63 @@ def divider_svg() -> str:
 """
 
 
+BUTTONS = [
+    # slug, label, icon, primary
+    ("portfolio", "Portfolio", "web", True),
+    ("linkedin", "LinkedIn", "linkedin", False),
+    ("cv-d365", "CV · D365 F&O", "download", False),
+    ("cv-net", "CV · .NET", "download", False),
+]
+
+BUTTON_ICONS = {
+    "web": ICONS["web"],
+    "download": '<path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/>',
+    "linkedin": '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7"/><path d="M8 7v.01"/><path d="M12 17v-4a2 2 0 0 1 4 0v4"/><path d="M12 10v7"/>',
+}
+
+
+def button_svg(label: str, icon: str, primary: bool, index: int) -> str:
+    h, char_w, pad, icon_w = 48, 9.4, 22, 26
+    w = int(len(label) * char_w + pad * 2 + icon_w)
+    delay = 0.1 + index * 0.12
+    fill = "#3b82f6" if primary else "#0f1627"
+    stroke = "#ffffff" if primary else "#94a3b8"
+    stroke_op = ".10" if primary else ".30"
+    text = "#ffffff" if primary else "#e6eaf2"
+    icon_c = "#ffffff" if primary else "#7fb0ff"
+    sheen = (
+        f'<rect x="-60" y="0" width="40" height="{h}" fill="url(#sheen)" class="sheen" style="animation-delay:{delay + 0.7:.2f}s"/>'
+        if primary else ""
+    )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(label)}">
+  <defs>
+    <linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="c"><rect width="{w}" height="{h}" rx="9"/></clipPath>
+  </defs>
+  <style>{BASE_STYLE}
+    .label {{ font-size: 16px; font-weight: 600; fill: {text}; }}
+    .ic {{ fill: none; stroke: {icon_c}; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }}
+    .sheen {{ animation: sheen 1.1s cubic-bezier(.65,0,.35,1) forwards; }}
+    @keyframes sheen {{ to {{ transform: translateX({w + 120}px); }} }}
+    @media (prefers-reduced-motion: reduce) {{ .sheen {{ display: none; }} }}
+  </style>
+  <g class="rise" style="animation-delay:{delay:.2f}s">
+    <g clip-path="url(#c)">
+      <rect width="{w}" height="{h}" fill="{fill}"/>
+      {sheen}
+    </g>
+    <rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="8.5" fill="none" stroke="{stroke}" stroke-opacity="{stroke_op}"/>
+    <g transform="translate({pad} 14) scale(.83)" class="ic">{BUTTON_ICONS[icon]}</g>
+    <text x="{pad + icon_w}" y="29.5" class="sans label">{escape(label)}</text>
+  </g>
+</svg>
+"""
+
+
 def main():
     ASSETS.mkdir(exist_ok=True)
+    for i, (slug, label, icon, primary) in enumerate(BUTTONS):
+        (ASSETS / f"btn-{slug}.svg").write_text(button_svg(label, icon, primary, i), encoding="utf-8", newline="\n")
     for i, card in enumerate(CARDS):
         (ASSETS / f"card-{card['slug']}.svg").write_text(card_svg(card, i), encoding="utf-8", newline="\n")
     (ASSETS / "stack.svg").write_text(stack_svg(), encoding="utf-8", newline="\n")

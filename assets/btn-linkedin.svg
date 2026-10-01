@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="145" height="48" viewBox="0 0 145 48" role="img" aria-label="LinkedIn">
+  <defs>
+    <linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="c"><rect width="145" height="48" rx="9"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: 'Segoe UI', 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'JetBrains Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .rise { opacity: 0; animation: rise .8s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    .draw { transform: scaleX(0); animation: draw 1.1s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes draw { to { transform: scaleX(1); } }
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .draw { animation: none; opacity: 1; transform: none; }
+    }
+
+    .label { font-size: 16px; font-weight: 600; fill: #e6eaf2; }
+    .ic { fill: none; stroke: #7fb0ff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .sheen { animation: sheen 1.1s cubic-bezier(.65,0,.35,1) forwards; }
+    @keyframes sheen { to { transform: translateX(265px); } }
+    @media (prefers-reduced-motion: reduce) { .sheen { display: none; } }
+  </style>
+  <g class="rise" style="animation-delay:0.22s">
+    <g clip-path="url(#c)">
+      <rect width="145" height="48" fill="#0f1627"/>
+      
+    </g>
+    <rect x=".5" y=".5" width="144" height="47" rx="8.5" fill="none" stroke="#94a3b8" stroke-opacity=".30"/>
+    <g transform="translate(22 14) scale(.83)" class="ic"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7"/><path d="M8 7v.01"/><path d="M12 17v-4a2 2 0 0 1 4 0v4"/><path d="M12 10v7"/></g>
+    <text x="48" y="29.5" class="sans label">LinkedIn</text>
+  </g>
+</svg>

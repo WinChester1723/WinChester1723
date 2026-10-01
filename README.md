@@ -18,4 +18,4 @@ Most of my D365 F&O work is client code and stays private. These are small publi
 
 <img src="./assets/divider.svg" width="100%" alt="">
 
-[Portfolio](https://winchester1723.github.io) · [LinkedIn](https://www.linkedin.com/in/pasha-pashazade-b81875146) · [CV (D365 F&O)](https://winchester1723.github.io/cv/Pasha_Pashazade_CV_D365FO.pdf) · [CV (.NET)](https://winchester1723.github.io/cv/Pasha_Pashazade_CV_NET.pdf)
+<a href="https://winchester1723.github.io"><img src="./assets/btn-portfolio.svg" height="44" alt="Portfolio"></a> <a href="https://www.linkedin.com/in/pasha-pashazade-b81875146"><img src="./assets/btn-linkedin.svg" height="44" alt="LinkedIn"></a> <a href="https://winchester1723.github.io/cv/Pasha_Pashazade_CV_D365FO.pdf"><img src="./assets/btn-cv-d365.svg" height="44" alt="CV — Dynamics 365 F&amp;O (PDF)"></a> <a href="https://winchester1723.github.io/cv/Pasha_Pashazade_CV_NET.pdf"><img src="./assets/btn-cv-net.svg" height="44" alt="CV — .NET (PDF)"></a>
